@@ -294,7 +294,7 @@ https://drive.google.com/file/d/1cSaNY-8oyzqQe4fqnkFAMCn1HERniv_w/view?usp=shari
 ## 🔐 Login
 
 ```
-<img width="1919" height="991" alt="Screenshot 2026-07-24 142858" src="https://github.com/user-attachments/assets/7096a480-48d1-4513-a57c-8258f5736425" />
+<img width="1919" height="991" alt="Screenshot 2026-07-24 142858" src="https://github.com/user-attachments/assets/25c76823-2f87-484a-a396-c4b742c9e049" />
 
 ```
 
