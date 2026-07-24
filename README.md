@@ -232,7 +232,7 @@ http://localhost:9000
 > **Add your project demo video link here**
 
 ```text
-https://your-video-demo-link
+https://drive.google.com/file/d/1cSaNY-8oyzqQe4fqnkFAMCn1HERniv_w/view?usp=sharing
 ```
 
 ---
@@ -242,7 +242,8 @@ https://your-video-demo-link
 ## 🏠 Dashboard
 
 ```
-Add Dashboard Screenshot Here
+<img width="1919" height="993" alt="Screenshot 2026-07-24 142930" src="https://github.com/user-attachments/assets/ed985fc6-e78d-41bf-8041-e781f90da0f1" />
+
 ```
 
 ---
@@ -250,15 +251,17 @@ Add Dashboard Screenshot Here
 ## ➕ Add Task
 
 ```
-Add Add Task Screenshot Here
+<img width="1919" height="989" alt="Screenshot 2026-07-24 143033" src="https://github.com/user-attachments/assets/9f5c56d3-88fe-4054-8466-26a4ef989217" />
+
 ```
 
 ---
 
-## 📋 View Tasks
+## 📋 View All Tasks
 
 ```
-Add View Tasks Screenshot Here
+<img width="1919" height="994" alt="Screenshot 2026-07-24 143015" src="https://github.com/user-attachments/assets/83fa5181-c083-4173-ad25-d966998f5015" />
+
 ```
 
 ---
@@ -266,15 +269,24 @@ Add View Tasks Screenshot Here
 ## ✏ Edit Task
 
 ```
-Add Edit Task Screenshot Here
+<img width="1919" height="992" alt="Screenshot 2026-07-24 143101" src="https://github.com/user-attachments/assets/89e5a772-b9df-4f9a-acc5-2332a4846040" />
+
 ```
 
 ---
 
-## 📂 Category Management
+## ➕ Add Category
 
 ```
-Add Category Screenshot Here
+<img width="1919" height="990" alt="Screenshot 2026-07-24 143258" src="https://github.com/user-attachments/assets/1a739c94-80e2-4d15-805a-36f68f49eba3" />
+
+
+```
+
+## 📋 View All Category 
+```
+<img width="1918" height="989" alt="Screenshot 2026-07-24 143244" src="https://github.com/user-attachments/assets/2ef16f78-e54f-4ca6-9ca6-bb167825a58c" />
+
 ```
 
 ---
@@ -282,7 +294,8 @@ Add Category Screenshot Here
 ## 🔐 Login
 
 ```
-Add Login Screenshot Here
+<img width="1919" height="991" alt="Screenshot 2026-07-24 142858" src="https://github.com/user-attachments/assets/a9579131-35cc-4804-852e-01e088c33842" />
+
 ```
 
 ---
@@ -290,7 +303,8 @@ Add Login Screenshot Here
 ## 📝 Register
 
 ```
-Add Register Screenshot Here
+<img width="1919" height="992" alt="Screenshot 2026-07-24 143318" src="https://github.com/user-attachments/assets/51fd6163-d5b6-474b-9282-d6799d5a5693" />
+
 ```
 
 ---
