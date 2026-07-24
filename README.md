@@ -253,59 +253,47 @@ https://drive.google.com/file/d/1cSaNY-8oyzqQe4fqnkFAMCn1HERniv_w/view?usp=shari
 
 <img width="1919" height="989" alt="Screenshot 2026-07-24 143033" src="https://github.com/user-attachments/assets/9f5c56d3-88fe-4054-8466-26a4ef989217" />
 
-```
 
 ---
 
 ## 📋 View All Tasks
 
-```
+
 <img width="1919" height="994" alt="Screenshot 2026-07-24 143015" src="https://github.com/user-attachments/assets/83fa5181-c083-4173-ad25-d966998f5015" />
 
-```
 
 ---
 
 ## ✏ Edit Task
 
-```
 <img width="1919" height="992" alt="Screenshot 2026-07-24 143101" src="https://github.com/user-attachments/assets/89e5a772-b9df-4f9a-acc5-2332a4846040" />
 
-```
 
 ---
 
 ## ➕ Add Category
 
-```
 <img width="1919" height="990" alt="Screenshot 2026-07-24 143258" src="https://github.com/user-attachments/assets/1a739c94-80e2-4d15-805a-36f68f49eba3" />
 
 
-```
-
 ## 📋 View All Category 
-```
+
 <img width="1918" height="989" alt="Screenshot 2026-07-24 143244" src="https://github.com/user-attachments/assets/2ef16f78-e54f-4ca6-9ca6-bb167825a58c" />
 
-```
 
 ---
 
 ## 🔐 Login
 
-```
 <img width="1919" height="991" alt="Screenshot 2026-07-24 142858" src="https://github.com/user-attachments/assets/25c76823-2f87-484a-a396-c4b742c9e049" />
 
-```
 
 ---
 
 ## 📝 Register
 
-```
 <img width="1919" height="992" alt="Screenshot 2026-07-24 143318" src="https://github.com/user-attachments/assets/51fd6163-d5b6-474b-9282-d6799d5a5693" />
 
-```
 
 ---
 
