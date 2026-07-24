@@ -1,0 +1,75 @@
+<%- include("../partials/header") %>
+
+<div class="app-shell">
+  <%- include("../partials/navbar", { active: "tasks" }) %>
+
+  <main class="main-content">
+    <div class="topbar">
+      <div>
+        <div class="eyebrow"><%= isAdmin ? "All Users" : "Personal" %></div>
+        <h1><%= title %></h1>
+      </div>
+      <a href="/tasks/new" class="btn btn-accent"><i class="bi bi-plus-circle me-1"></i> Add Task</a>
+    </div>
+
+    <%- include("../partials/flash") %>
+
+    <form class="search-bar row g-2 mb-4" method="GET" action="/tasks">
+      <div class="col-md-6">
+        <div class="input-group">
+          <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+          <input type="text" name="q" class="form-control" placeholder="Search tasks by title..." value="<%= search %>">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <select name="status" class="form-select">
+          <option value="">All statuses</option>
+          <option value="Pending" <%= statusFilter === "Pending" ? "selected" : "" %>>Pending</option>
+          <option value="In Progress" <%= statusFilter === "In Progress" ? "selected" : "" %>>In Progress</option>
+          <option value="Completed" <%= statusFilter === "Completed" ? "selected" : "" %>>Completed</option>
+        </select>
+      </div>
+      <div class="col-md-3 d-flex gap-2">
+        <button type="submit" class="btn btn-outline-accent flex-grow-1">Filter</button>
+        <a href="/tasks" class="btn btn-outline-secondary">Reset</a>
+      </div>
+    </form>
+
+    <% if (tasks.length === 0) { %>
+      <div class="empty-state">
+        <i class="bi bi-clipboard-x d-block"></i>
+        <p class="mb-1 fw-semibold">No tasks found</p>
+        <p class="small mb-3">Try adjusting your search or filters, or create a new task.</p>
+        <a href="/tasks/new" class="btn btn-accent btn-sm"><i class="bi bi-plus-circle me-1"></i> Add Task</a>
+      </div>
+    <% } else { %>
+      <div class="row g-3">
+        <% tasks.forEach(function(task) { %>
+          <div class="col-md-6 col-lg-4">
+            <%- include("taskItem", { task: task, isAdmin: isAdmin }) %>
+          </div>
+        <% }); %>
+      </div>
+
+      <% if (totalPages > 1) { %>
+        <nav class="mt-4" aria-label="Task pagination">
+          <ul class="pagination justify-content-center">
+            <li class="page-item <%= currentPage <= 1 ? 'disabled' : '' %>">
+              <a class="page-link" href="/tasks?page=<%= currentPage - 1 %>&q=<%= search %>&status=<%= statusFilter %>">Previous</a>
+            </li>
+            <% for (let i = 1; i <= totalPages; i++) { %>
+              <li class="page-item <%= currentPage === i ? 'active' : '' %>">
+                <a class="page-link" href="/tasks?page=<%= i %>&q=<%= search %>&status=<%= statusFilter %>"><%= i %></a>
+              </li>
+            <% } %>
+            <li class="page-item <%= currentPage >= totalPages ? 'disabled' : '' %>">
+              <a class="page-link" href="/tasks?page=<%= currentPage + 1 %>&q=<%= search %>&status=<%= statusFilter %>">Next</a>
+            </li>
+          </ul>
+        </nav>
+      <% } %>
+    <% } %>
+  </main>
+</div>
+
+<%- include("../partials/footer") %>

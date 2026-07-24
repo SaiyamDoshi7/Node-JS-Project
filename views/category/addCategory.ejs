@@ -1,0 +1,41 @@
+<%- include("../partials/header") %>
+
+<div class="app-shell">
+  <%- include("../partials/navbar", { active: "categories" }) %>
+
+  <main class="main-content">
+    <div class="topbar">
+      <div>
+        <div class="eyebrow">Admin</div>
+        <h1><%= title %></h1>
+      </div>
+      <a href="/categories" class="btn btn-outline-secondary"><i class="bi bi-arrow-left me-1"></i> Back to Categories</a>
+    </div>
+
+    <%- include("../partials/flash") %>
+
+    <div class="card" style="max-width: 560px;">
+      <div class="card-body p-4">
+        <form action="<%= category ? '/categories/' + category._id + '?_method=PUT' : '/categories' %>" method="POST">
+          <div class="mb-3">
+            <label class="form-label">Category name</label>
+            <input type="text" name="categoryName" class="form-control" placeholder="e.g. Marketing"
+              value="<%= category ? category.categoryName : '' %>" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea name="description" class="form-control" rows="3" placeholder="What kind of tasks belong here?"><%= category ? category.description : '' %></textarea>
+          </div>
+          <div class="d-flex gap-2 mt-3">
+            <button type="submit" class="btn btn-accent px-4">
+              <i class="bi bi-check2 me-1"></i> <%= category ? "Save Changes" : "Create Category" %>
+            </button>
+            <a href="/categories" class="btn btn-outline-secondary px-4">Cancel</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<%- include("../partials/footer") %>

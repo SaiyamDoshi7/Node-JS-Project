@@ -1,0 +1,63 @@
+<%- include("../partials/header") %>
+
+<div class="app-shell">
+  <%- include("../partials/navbar", { active: "categories" }) %>
+
+  <main class="main-content">
+    <div class="topbar">
+      <div>
+        <div class="eyebrow">Admin</div>
+        <h1>Categories</h1>
+      </div>
+      <a href="/categories/new" class="btn btn-accent"><i class="bi bi-plus-circle me-1"></i> Add Category</a>
+    </div>
+
+    <%- include("../partials/flash") %>
+
+    <div class="card">
+      <div class="card-body p-0">
+        <% if (categories.length === 0) { %>
+          <div class="empty-state">
+            <i class="bi bi-tags d-block"></i>
+            <p class="mb-1 fw-semibold">No categories yet</p>
+            <p class="small mb-3">Create categories to help organize tasks.</p>
+            <a href="/categories/new" class="btn btn-accent btn-sm"><i class="bi bi-plus-circle me-1"></i> Add Category</a>
+          </div>
+        <% } else { %>
+          <div class="table-responsive">
+            <table class="table table-clean mb-0">
+              <thead>
+                <tr>
+                  <th class="ps-4">Name</th>
+                  <th>Description</th>
+                  <th>Created By</th>
+                  <th>Created</th>
+                  <th class="text-end pe-4">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% categories.forEach(function(cat) { %>
+                  <tr>
+                    <td class="ps-4 fw-semibold"><%= cat.categoryName %></td>
+                    <td class="text-muted"><%= cat.description || "—" %></td>
+                    <td><%= cat.createdBy ? cat.createdBy.name : "—" %></td>
+                    <td class="text-muted"><%= new Date(cat.createdAt).toLocaleDateString() %></td>
+                    <td class="text-end pe-4">
+                      <a href="/categories/<%= cat._id %>/edit" class="btn btn-sm btn-outline-accent me-1"><i class="bi bi-pencil"></i></a>
+                      <form action="/categories/<%= cat._id %>?_method=DELETE" method="POST" class="d-inline"
+                        onsubmit="return confirm('Delete this category?');">
+                        <button type="submit" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash"></i></button>
+                      </form>
+                    </td>
+                  </tr>
+                <% }); %>
+              </tbody>
+            </table>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </main>
+</div>
+
+<%- include("../partials/footer") %>

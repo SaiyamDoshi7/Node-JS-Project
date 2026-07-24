@@ -1,0 +1,49 @@
+<%- include("../partials/header") %>
+
+<div class="app-shell">
+  <%- include("../partials/navbar", { active: "users" }) %>
+
+  <main class="main-content">
+    <div class="topbar">
+      <div>
+        <div class="eyebrow">Admin</div>
+        <h1>Users</h1>
+      </div>
+    </div>
+
+    <%- include("../partials/flash") %>
+
+    <div class="card">
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table table-clean mb-0">
+            <thead>
+              <tr>
+                <th class="ps-4">Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Tasks</th>
+                <th class="pe-4">Joined</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% users.forEach(function(u) { %>
+                <tr>
+                  <td class="ps-4 fw-semibold"><%= u.name %></td>
+                  <td class="text-muted"><%= u.email %></td>
+                  <td>
+                    <span class="badge <%= u.role === 'admin' ? 'badge-priority-high' : 'badge-status-pending' %>"><%= u.role %></span>
+                  </td>
+                  <td><%= u.taskCount %></td>
+                  <td class="pe-4 text-muted"><%= new Date(u.createdAt).toLocaleDateString() %></td>
+                </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<%- include("../partials/footer") %>

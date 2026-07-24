@@ -1,0 +1,60 @@
+<%- include("../partials/header") %>
+
+<div class="auth-wrapper">
+  <div class="auth-card row g-0">
+    <div class="col-md-5 auth-side">
+      <i class="bi bi-check2-square" style="font-size:2.2rem;"></i>
+      <h2 class="text-white mt-3 mb-2">TaskFlow</h2>
+      <p class="mb-0" style="color:#9fb0c4;">Create an account and start managing your tasks in minutes.</p>
+      <ul class="list-unstyled mt-4" style="color:#b7c2d1; font-size:0.9rem;">
+        <li class="mb-2"><i class="bi bi-shield-lock me-2"></i>Passwords hashed with bcrypt</li>
+        <li class="mb-2"><i class="bi bi-lightning-charge me-2"></i>Instant access after sign up</li>
+        <li class="mb-2"><i class="bi bi-folder2-open me-2"></i>Organize tasks with categories</li>
+      </ul>
+    </div>
+    <div class="col-md-7 auth-form-side">
+      <h3 class="mb-1">Create your account</h3>
+      <p class="text-muted mb-4">It only takes a minute.</p>
+
+      <%- include("../partials/flash") %>
+
+      <form action="/auth/register" method="POST" novalidate>
+        <div class="mb-3">
+          <label class="form-label">Full name</label>
+          <input type="text" class="form-control" name="name" placeholder="Jane Doe" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Email address</label>
+          <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" placeholder="At least 6 characters" minlength="6" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label class="form-label">Confirm password</label>
+            <input type="password" class="form-control" name="confirmPassword" placeholder="Repeat password" minlength="6" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Account type</label>
+          <select name="role" class="form-select">
+            <option value="user" selected>User</option>
+            <option value="admin">Admin</option>
+          </select>
+          <div class="form-text">For this exam/demo project, admin can be selected directly. In production, admin accounts should be provisioned separately.</div>
+        </div>
+
+        <button type="submit" class="btn btn-accent w-100 py-2 mt-2">Create Account</button>
+      </form>
+
+      <p class="text-center text-muted mt-4 mb-0" style="font-size:0.9rem;">
+        Already have an account? <a href="/auth/login" class="fw-semibold" style="color:var(--accent);">Log in</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>

@@ -1,0 +1,45 @@
+<nav class="sidebar d-flex flex-column">
+  <div class="brand">
+    <i class="bi bi-check2-square"></i> TaskFlow
+  </div>
+
+  <div class="flex-grow-1">
+    <a href="/tasks/dashboard" class="nav-link <%= active === 'dashboard' ? 'active' : '' %>">
+      <i class="bi bi-speedometer2"></i> Dashboard
+    </a>
+
+    <% if (user.role === "admin") { %>
+      <a href="/tasks" class="nav-link <%= active === 'tasks' ? 'active' : '' %>">
+        <i class="bi bi-list-task"></i> All Tasks
+      </a>
+      <a href="/categories" class="nav-link <%= active === 'categories' ? 'active' : '' %>">
+        <i class="bi bi-tags"></i> Categories
+      </a>
+      <a href="/users" class="nav-link <%= active === 'users' ? 'active' : '' %>">
+        <i class="bi bi-people"></i> Users
+      </a>
+    <% } else { %>
+      <a href="/tasks" class="nav-link <%= active === 'tasks' ? 'active' : '' %>">
+        <i class="bi bi-list-task"></i> My Tasks
+      </a>
+    <% } %>
+
+    <div class="nav-section-label">Quick Action</div>
+    <a href="/tasks/new" class="nav-link <%= active === 'new-task' ? 'active' : '' %>">
+      <i class="bi bi-plus-circle"></i> Add Task
+    </a>
+  </div>
+
+  <div class="user-chip">
+    <div class="d-flex align-items-center gap-2 mb-2">
+      <img src="<%= user.avatar %>" onerror="this.src='https://ui-avatars.com/api/?background=3E5C76&color=fff&name=<%= encodeURIComponent(user.name) %>'" alt="avatar" width="34" height="34" class="rounded-circle">
+      <div>
+        <div class="fw-semibold text-white" style="font-size:0.85rem;"><%= user.name %></div>
+        <span class="role-badge"><%= user.role %></span>
+      </div>
+    </div>
+    <a href="/auth/logout" class="nav-link text-danger-emphasis">
+      <i class="bi bi-box-arrow-right"></i> Logout
+    </a>
+  </div>
+</nav>

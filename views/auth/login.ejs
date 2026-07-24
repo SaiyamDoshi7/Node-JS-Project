@@ -1,0 +1,40 @@
+<%- include("../partials/header") %>
+
+<div class="auth-wrapper">
+  <div class="auth-card row g-0">
+    <div class="col-md-5 auth-side">
+      <i class="bi bi-check2-square" style="font-size:2.2rem;"></i>
+      <h2 class="text-white mt-3 mb-2">TaskFlow</h2>
+      <p class="mb-0" style="color:#9fb0c4;">Organize your work, track priorities, and get things done — one task at a time.</p>
+      <ul class="list-unstyled mt-4" style="color:#b7c2d1; font-size:0.9rem;">
+        <li class="mb-2"><i class="bi bi-shield-lock me-2 text-teal"></i>Secure JWT authentication</li>
+        <li class="mb-2"><i class="bi bi-people me-2"></i>Role-based access for admins &amp; users</li>
+        <li class="mb-2"><i class="bi bi-kanban me-2"></i>Track status, priority &amp; due dates</li>
+      </ul>
+    </div>
+    <div class="col-md-7 auth-form-side">
+      <h3 class="mb-1">Welcome back</h3>
+      <p class="text-muted mb-4">Log in to continue to your dashboard.</p>
+
+      <%- include("../partials/flash") %>
+
+      <form action="/auth/login" method="POST" novalidate>
+        <div class="mb-3">
+          <label class="form-label">Email address</label>
+          <input type="email" class="form-control" name="email" placeholder="you@example.com" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-accent w-100 py-2 mt-2">Log In</button>
+      </form>
+
+      <p class="text-center text-muted mt-4 mb-0" style="font-size:0.9rem;">
+        Don't have an account? <a href="/auth/register" class="fw-semibold" style="color:var(--accent);">Register here</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<%- include("../partials/footer") %>
