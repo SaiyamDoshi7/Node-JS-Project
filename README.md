@@ -1,3 +1,4 @@
+<img width="1919" height="991" alt="Screenshot 2026-07-24 142858" src="https://github.com/user-attachments/assets/a9e39b7e-c919-4dd8-8bd0-aefc619cf941" />
 # 🚀 Task Management App
 
 <div align="center">
