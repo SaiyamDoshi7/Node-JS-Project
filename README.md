@@ -1,4 +1,3 @@
-<img width="1919" height="991" alt="Screenshot 2026-07-24 142858" src="https://github.com/user-attachments/assets/a9e39b7e-c919-4dd8-8bd0-aefc619cf941" />
 # 🚀 Task Management App
 
 <div align="center">
@@ -242,16 +241,16 @@ https://drive.google.com/file/d/1cSaNY-8oyzqQe4fqnkFAMCn1HERniv_w/view?usp=shari
 
 ## 🏠 Dashboard
 
-```
+
 <img width="1919" height="993" alt="Screenshot 2026-07-24 142930" src="https://github.com/user-attachments/assets/ed985fc6-e78d-41bf-8041-e781f90da0f1" />
 
-```
+
 
 ---
 
 ## ➕ Add Task
 
-```
+
 <img width="1919" height="989" alt="Screenshot 2026-07-24 143033" src="https://github.com/user-attachments/assets/9f5c56d3-88fe-4054-8466-26a4ef989217" />
 
 ```
